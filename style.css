@@ -204,6 +204,7 @@ h1 em {
 .percent-grid {
     height: 400px;
     grid-row-gap: 5%;
+    grid-auto-rows: 1fr;
 }
 
 .global-grid {
