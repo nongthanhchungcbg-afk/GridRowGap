@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ví dụ CSS grid-row-gap với độ dài, phần trăm và các giá trị toàn cục.">
+    <title>Grid Row Gap — CSS Grid Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#top"><span>G</span> CSS GRID LAB</a>
+        <p>Bài thực hành <strong>03 / 04</strong></p>
+    </header>
+
+    <main id="top">
+        <section class="intro">
+            <p class="eyebrow">GRID PROPERTIES / 03</p>
+            <h1>Đặt khoảng thở<br><em>giữa các hàng.</em></h1>
+            <p class="intro-copy"><code>grid-row-gap</code> kiểm soát khoảng cách dọc giữa các track hàng. Thuộc tính hiện đại tương đương là <code>row-gap</code>.</p>
+        </section>
+
+        <section class="example">
+            <div class="example-heading">
+                <div><span class="example-index">A</span><h2>Độ dài cố định</h2></div>
+                <span class="result">20px</span>
+            </div>
+            <div class="demo-grid length-grid">
+                <div class="cell">01 <span>HÀNG 1</span></div><div class="cell">02 <span>HÀNG 1</span></div>
+                <div class="cell">03 <span>HÀNG 2</span></div><div class="cell">04 <span>HÀNG 2</span></div>
+            </div>
+            <p class="code"><code>grid-row-gap: 20px;</code><span>Khoảng cách giữa các hàng luôn là 20px.</span></p>
+        </section>
+
+        <section class="example">
+            <div class="example-heading">
+                <div><span class="example-index alt-index">B</span><h2>Phần trăm chiều cao</h2></div>
+                <span class="result">5% của 400px</span>
+            </div>
+            <div class="demo-grid percent-grid">
+                <div class="cell">01 <span>HÀNG 1</span></div><div class="cell">02 <span>HÀNG 1</span></div>
+                <div class="cell">03 <span>HÀNG 2</span></div><div class="cell">04 <span>HÀNG 2</span></div>
+            </div>
+            <p class="code"><code>grid-row-gap: 5%;</code><span>Chiều cao lưới 400px, vì vậy khoảng trống là 20px.</span></p>
+        </section>
+
+        <section class="example">
+            <div class="example-heading">
+                <div><span class="example-index third-index">C</span><h2>Giá trị toàn cục: <code>initial</code></h2></div>
+                <span class="result">giá trị ban đầu: 0</span>
+            </div>
+            <div class="demo-grid global-grid">
+                <div class="cell">01 <span>HÀNG 1</span></div><div class="cell">02 <span>HÀNG 1</span></div>
+                <div class="cell">03 <span>HÀNG 2</span></div><div class="cell">04 <span>HÀNG 2</span></div>
+            </div>
+            <p class="code"><code>grid-row-gap: initial;</code><span>Đặt khoảng cách hàng về giá trị ban đầu của thuộc tính.</span></p>
+        </section>
+
+        <aside class="note">
+            <span aria-hidden="true">✳</span>
+            <p><strong>Thử thêm</strong> Thay `initial` bằng `inherit`, `unset` hoặc `revert`. `grid-row-gap` là bí danh tương thích; trong CSS mới hãy ưu tiên `row-gap`.</p>
+        </aside>
+    </main>
+
+    <footer><span>CSS GRID LAB</span><span>03 — 04</span></footer>
+</body>
+</html>

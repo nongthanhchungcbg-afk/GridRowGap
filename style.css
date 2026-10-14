@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+    --ink: #172e29;
+    --green: #176b58;
+    --muted: #71817a;
+    --paper: #f6f7f2;
+    --line: #e1e7df;
+    --lime: #d8ee8a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(ellipse at 85% 4%, rgba(220, 232, 195, 0.24), transparent 31rem),
+        var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.topbar,
+footer {
+    display: flex;
+    min-height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(22px, calc((100% - 900px) / 2));
+}
+
+.topbar {
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.brand span {
+    display: grid;
+    width: 29px;
+    height: 29px;
+    place-items: center;
+    border-radius: 9px;
+    background: var(--green);
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+.topbar > p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.topbar strong {
+    margin-left: 7px;
+    color: var(--green);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 43px 22px 58px;
+}
+
+.intro {
+    margin-bottom: 26px;
+}
+
+.eyebrow {
+    margin: 0;
+    color: var(--green);
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+}
+
+h1,
+h2 {
+    font-family: "Space Grotesk", Arial, sans-serif;
+}
+
+h1 {
+    margin: 14px 0 10px;
+    font-size: clamp(39px, 6vw, 59px);
+    font-weight: 600;
+    letter-spacing: -0.075em;
+    line-height: 1.02;
+}
+
+h1 em {
+    color: var(--green);
+    font-style: normal;
+}
+
+.intro-copy {
+    max-width: 620px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.intro-copy code {
+    color: var(--green);
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+}
+
+.example {
+    margin-top: 12px;
+    padding: 14px 17px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.78);
+}
+
+.example-heading,
+.example-heading > div {
+    display: flex;
+    align-items: center;
+}
+
+.example-heading {
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.example-heading > div {
+    gap: 9px;
+}
+
+.example-index {
+    display: grid;
+    width: 23px;
+    height: 23px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--lime);
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+}
+
+.alt-index {
+    background: #d8e6e3;
+    color: var(--green);
+}
+
+.third-index {
+    background: #eee2c8;
+    color: #82643a;
+}
+
+.example-heading h2 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.example-heading code {
+    color: var(--green);
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+}
+
+.result {
+    color: #89938b;
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+}
+
+.demo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 43px;
+    column-gap: 8px;
+    background-image: linear-gradient(to bottom, transparent 0, transparent 43px, rgba(94, 117, 91, 0.1) 43px, rgba(94, 117, 91, 0.1) 44px);
+}
+
+.length-grid {
+    grid-row-gap: 20px;
+}
+
+.percent-grid {
+    height: 400px;
+    grid-row-gap: 5%;
+}
+
+.global-grid {
+    grid-row-gap: initial;
+}
+
+.cell {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 11px;
+    padding: 7px 13px;
+    background: #eaf0e4;
+    color: #456151;
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+}
+
+.cell span {
+    color: #81907f;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.08em;
+}
+
+.cell:nth-child(2) {
+    background: #dceae2;
+}
+
+.cell:nth-child(3) {
+    background: #e9e5d8;
+}
+
+.cell:nth-child(4) {
+    background: #d8e6e3;
+}
+
+.code {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 5px 12px;
+    margin: 9px 0 0;
+}
+
+.code code {
+    color: var(--green);
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+}
+
+.code > span {
+    color: #89938b;
+    font-size: 9px;
+}
+
+.note {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    margin-top: 14px;
+    padding: 12px 15px;
+    border-left: 3px solid #a5c56c;
+    background: #edf1e6;
+}
+
+.note > span {
+    color: #749047;
+    font-size: 16px;
+}
+
+.note p {
+    margin: 0;
+    color: #647267;
+    font-size: 9px;
+    line-height: 1.65;
+}
+
+.note strong {
+    margin-right: 5px;
+    color: var(--ink);
+}
+
+.note p > code {
+    color: var(--green);
+    font-family: "DM Mono", monospace;
+}
+
+footer {
+    min-height: 52px;
+    border-top: 1px solid var(--line);
+    color: #89938b;
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+}
+
+@media (max-width: 520px) {
+    .topbar {
+        min-height: 61px;
+    }
+
+    main {
+        padding: 34px 15px 44px;
+    }
+
+    .example {
+        padding: 12px;
+    }
+
+    .example-heading {
+        align-items: flex-start;
+    }
+
+    .example-heading h2 {
+        font-size: 11px;
+    }
+
+    .demo-grid {
+        grid-auto-rows: 40px;
+        column-gap: 6px;
+        background-image: linear-gradient(to bottom, transparent 0, transparent 40px, rgba(94, 117, 91, 0.1) 40px, rgba(94, 117, 91, 0.1) 41px);
+    }
+
+    .percent-grid {
+        height: 320px;
+    }
+
+    .cell {
+        gap: 6px;
+        padding: 5px 6px;
+        font-size: 9px;
+    }
+
+    .cell span {
+        font-size: 7px;
+    }
+
+    .result {
+        font-size: 8px;
+    }
+
+    .topbar,
+    footer {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
